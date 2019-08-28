@@ -2,27 +2,6 @@
 #include<cmath> 
 using namespace std;
 
-void check(int a[][7],int i)
-{
-	int k,num=0;
-	for(int j=1;j<=5;j++)
-	{
-		if(a[i][j]==0)
-		{
-			int s=1,po=1;
-			for(k=1;k+j<=5&&po;k++)
-			{
-				if(a[i][j+k]==0)
-					s++;
-				else
-					po=0;
-			}
-			if(s>num)
-				num=s;
-		}
-	}
-	a[i][6]=num;
-}
 int a[21][7];
 int main()
 {
@@ -101,13 +80,6 @@ int main()
 		}
 		cout<<endl;
 	}
-/*	for(int i=0;i<20;i++)
-	{
-		for(int j=0;j<6;j++)
-		{
-			cout<<a[i][j];
-		}
-		cout<<endl;
-	}*/
+
 	return 0;
 }
